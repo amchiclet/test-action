@@ -1,3 +1,6 @@
+# alt: added some comments at the top of the file
+# multi-line that is
+
 name: PR-checklist
 
 on:
