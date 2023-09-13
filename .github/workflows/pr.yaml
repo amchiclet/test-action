@@ -1,0 +1,22 @@
+name: PR
+
+on:
+  pull_request:
+    types: [opened, edited]
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  checklist:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: pr-checklist
+          only_create: true
+          message: |
+            ## PR Checklist
+            :information_source: This checklist serves as a reminder of things we care about for both the author and the reviewer.
+
+            - [ ] test
