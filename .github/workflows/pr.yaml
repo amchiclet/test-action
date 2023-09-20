@@ -10,11 +10,12 @@ on:
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+permissions:
+  pull-requests: write
+
 jobs:
   add-checklist-comment:
     runs-on: ubuntu-latest
-    permissions:
-      pull-requests: write
     steps:
       - uses: marocchino/sticky-pull-request-comment@v2
         with:
